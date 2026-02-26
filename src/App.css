@@ -1,0 +1,331 @@
+/*General CSS*/
+
+.g-1{
+  gap: 50px;
+}
+
+.g-2{
+  gap: 20%;
+}
+
+.fs-2{
+  font-size: 17px;
+}
+
+.w-5{
+  width: 70%;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.underline{
+  text-decoration: underline dotted;
+}
+
+.btn{
+  background-color: transparent;
+  width: fit-content;
+  font-family: 'doto', sans-serif;
+  cursor: pointer;
+}
+
+.btn strong{
+  font-size: 24px;
+}
+
+.app-container{
+  width: 96vw;
+  height: 90vh;
+  border: solid 1px white;
+  margin-bottom: 22px;
+}
+
+/*Over all pages*/
+
+.app-wrapper{
+  position: relative;
+}
+
+.app-wrapper::before{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../src/assets/noise.svg);
+  background-repeat: repeat;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.lang{
+  width: 20px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.drkmode{
+  font-size: 17px;
+  cursor: pointer;
+}
+
+/*HomePage*/
+
+.section-title img{
+  width: auto;
+  height: 100px;
+  margin: 20px 0 0 30px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 2%;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  border-bottom: solid 1px white;
+}
+
+.nav-title{
+  margin-left: 10px;
+  font-size: 28px;
+}
+
+.options{
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  margin-right: 30px;
+}
+
+.content{
+  width: 90%;
+  height: 60%;
+  margin-inline: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side{
+  width: 40%;
+  font-size: 18px;
+}
+
+.left-side p strong{
+  font-size: 20px;
+}
+
+.right-side{
+  width: 40%;
+}
+
+a{
+  color: rgb(180, 180, 180);
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+}
+
+.home-menu ul li{
+  transition: 0.5s ease-in-out;
+}
+
+.home-menu ul li:hover{
+  letter-spacing: 10px;
+  transform: scale(1.2);
+}
+
+.home-menu ul{
+  list-style-type: none;
+  color: rgb(180, 180, 180);
+  font-size: 2rem;
+}
+
+.navigation-menu{
+  margin: auto auto auto 18%;
+}
+
+.navigation-menu ul{
+  display: flex;
+  list-style-type: none;
+  font-size: 1rem;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-menu ul li{
+  width: 80px;
+  text-align: center;
+}
+
+.navigation-menu ul li:hover{
+  transform: scale(1.0);
+}
+
+.navigation-menu ul a:hover{
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.contacts-section{
+  width: 100%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts-content{
+  font-size: 18px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.socials-section{
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn{
+  background: transparent;
+  border: 0;
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(180, 180, 180);
+}
+
+/*Pagina About*/
+
+.about-section{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-section p{
+  text-align: center;
+  font-size: 18px;
+}
+
+.cta{
+  border-bottom: dotted 3px white;
+  padding-bottom: 0;
+}
+
+.cta img{
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.presentation{
+  font-size: 14px;
+}
+
+/*Projects Page*/
+
+.project-list{
+  width: 400px;
+  background-color: #101010;
+  height: 300px;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
+  direction: rtl;
+}
+
+.project-list > *{
+  direction: ltr;
+}
+
+::-webkit-scrollbar{
+  width: 18px;
+  height: 100%;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 9px;
+  border: 6px solid transparent;
+  background-clip: padding-box;
+}
+
+.project{
+  margin: 10px 15px 10px 5px;
+  border-bottom: 2px dotted white;
+  padding-bottom: 10px;
+}
+
+.project-name{
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.project-details{
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.visit{
+  cursor: pointer;
+}
+
+.visit img{
+  width: 10px;
+  height: 10px;
+}
+
+/*Contacts page*/
+
+.contacts{
+  text-align: center;
+}
+
+.contacts-section{
+  height: 50%;
+}
+
+/*modal*/
+
+.modal{
+  position: fixed;
+  height: fit-content;
+  width: 320px;
+  z-index: 1000;
+  background-color: #101010;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn{
+  margin-top: 10px;
+  width: 95%;
+  display: flex;
+  justify-content: end;
+}
+
+.modal-content{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.modal-content p{
+  text-align: center;
+  font-size: 18px;
+}
