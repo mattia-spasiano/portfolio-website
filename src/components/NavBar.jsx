@@ -18,7 +18,7 @@ export default function NavBar({ isItalian, setIsItalian }) {
                 {isHomePage ? '' 
                 : 
                 <div className="desktop icon" onClick={handleMobileMenu}>
-                    <HiOutlineMenu size={40}/>
+                    <HiOutlineMenu size={35}/>
                 </div>}
                 <div className="nav-title">
                     <strong>Portfolio</strong>

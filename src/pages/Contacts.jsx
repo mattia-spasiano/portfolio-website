@@ -15,7 +15,7 @@ export default function Contacts({ isItalian, setIsItalian }) {
             <div className="section-title">
                 <img src="../src/assets/contacts.svg" alt="" />
             </div>
-            <div className="contacts-section mobile">
+            <div className="contacts-section">
                 {isModalOpen ? 
                 <Modal
                     isItalian={isItalian}

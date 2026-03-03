@@ -17,8 +17,8 @@ export default function Navigation({ isItalian, isMenuOpen, setIsMenuOpen }) {
                     <IoClose size={30} />            
                 </li>
                 : ''} */}
-                <li className={`${isMenuOpen ? '' : 'hidden'} desktop`}>
-                    <IoClose size={40} onClick={handleCloseMenu}/> 
+                <li className={`${isMenuOpen ? 'close-visible' : 'close-hidden'} desktop`}>
+                    <IoClose size={35} onClick={handleCloseMenu}/> 
                 </li>
                 {isHomePage ? '' :
                 <li>

@@ -9,7 +9,7 @@ export default function About({ isItalian, setIsItalian }) {
             <NavBar
                 isItalian={isItalian}
                 setIsItalian={setIsItalian} />
-            <div className="section-title mobile">
+            <div className="section-title">
                 <img src="../src/assets/about.png" alt="" />
             </div>
             <div className="about-section content flex-col">
