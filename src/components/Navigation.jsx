@@ -1,13 +1,25 @@
 import { useLocation, Link } from "react-router-dom"
+import { IoClose } from 'react-icons/io5'
 
-export default function Navigation({ isItalian }) {
+export default function Navigation({ isItalian, isMenuOpen, setIsMenuOpen }) {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
     console.log('isItalian', isItalian)
+    const handleCloseMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    }
 
     return(
-        <div className={isHomePage ? 'home-menu' : 'navigation-menu'}> {/*Da aggiungere la classe condizionale per la sidebar*/}
+        <div className={`${isHomePage ? 'home-menu' : 'navigation-menu'} ${isMenuOpen ? 'open' : ''}`}> {/*Da aggiungere la classe condizionale per la sidebar*/}
             <ul>
+                {/* {isMenuOpen ? 
+                <li className="icon-close" onClick={handleCloseMenu}>
+                    <IoClose size={30} />            
+                </li>
+                : ''} */}
+                <li className={`${isMenuOpen ? '' : 'hidden'} desktop`}>
+                    <IoClose size={40} onClick={handleCloseMenu}/> 
+                </li>
                 {isHomePage ? '' :
                 <li>
                     <Link to="/">

@@ -11,7 +11,7 @@ export default function HomePage({isItalian, setIsItalian}) {
             <div className="section-title">
                     <img src="../src/assets/home.svg" alt="" />
             </div>
-            <div className="content g-2 flex">
+            <div className="content g-2">
                 <div className="left-side">
                     <p>{isItalian ? 'Ciao! Il mio nome è ' : 'Hi! My name is '}
                         <strong>Mattia!</strong>

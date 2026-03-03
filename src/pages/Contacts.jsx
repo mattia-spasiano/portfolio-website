@@ -6,10 +6,6 @@ export default function Contacts({ isItalian, setIsItalian }) {
 
     const [isModalOpen, setIsModalOpen] = useState(false)
 
-    const toggleCode = () => {
-        setIsModalOpen(!isModalOpen);
-    };
-
     return (
         <>
 
@@ -19,7 +15,7 @@ export default function Contacts({ isItalian, setIsItalian }) {
             <div className="section-title">
                 <img src="../src/assets/contacts.svg" alt="" />
             </div>
-            <div className="contacts-section">
+            <div className="contacts-section mobile">
                 {isModalOpen ? 
                 <Modal
                     isItalian={isItalian}
@@ -33,7 +29,6 @@ export default function Contacts({ isItalian, setIsItalian }) {
                         <button className="btn">Instagram</button>
                         <button className="btn">LinkedIn</button>
                         <button className="btn">E-Mail</button>
-                        <button className="btn" onClick={toggleCode}>WhatsApp</button>
                     </div>
                 </div>
             </div>

@@ -16,10 +16,6 @@
   width: 70%;
 }
 
-.flex{
-  display: flex;
-}
-
 .flex-col{
   display: flex;
   flex-direction: column;
@@ -113,6 +109,7 @@ nav{
   margin-inline: auto;
   justify-content: center;
   align-items: center;
+  display: flex;
 }
 
 .left-side{
@@ -295,37 +292,121 @@ a{
   height: 50%;
 }
 
-/*modal*/
-
-.modal{
-  position: fixed;
-  height: fit-content;
-  width: 320px;
-  z-index: 1000;
-  background-color: #101010;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.desktop{
+  display: none;
 }
 
-.close-btn{
-  margin-top: 10px;
-  width: 95%;
-  display: flex;
-  justify-content: end;
-}
+/*Mobile View*/
 
-.modal-content{
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-}
+@media (max-width: 768px){
+  
+  .desktop{
+    display: block;
+  }
 
-.modal-content p{
-  text-align: center;
-  font-size: 18px;
+  /*HomePage*/
+
+  .app-container{
+    margin: 0 0 5px 0;
+    height: 95vh;
+  }
+  .navbar{
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .section-title{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+  }
+  .mobile{
+    display: none;
+  }
+  .section-title img{
+    width: 90%;
+    height: 50px;
+    margin: 5px auto 0 30px;
+  }
+  .drkmode{
+    font-size: 20px;
+    padding-block: 5px;
+  }
+  .lang{
+    font-size: 20px;
+    padding-block: 5px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .left-side{
+    width: 90%;
+  }
+  .right-side{
+    width: 90%;
+  }
+  .home-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-menu ul{
+    width: fit-content;
+    padding: 0;
+  }
+  .home-menu ul li a{
+    font-size: 30px;
+  }
+  
+  /*Navigation menu outside of HomePage*/
+  .hidden{
+    display: none;
+  }
+  .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+  }
+  .navigation-menu{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 70%;
+    background-color: black;
+    margin: 0;
+    transition: left 0.3s ease-in-out;
+    z-index: 4;
+  }
+  .navigation-menu ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .navigation-menu ul li{
+    text-align: start;
+    margin-inline: auto;
+    padding-right: 70px;
+    padding-left: 10px;
+    font-size: 24px;
+    width: 150px;
+  }
+  .navigation-menu ul li:not(:first-child){
+    border-bottom: 1px dotted white;
+  }
+  .navigation-menu ul li:first-child{
+    text-align: end;
+    padding: 0;
+    width: 90%;
+    margin-inline: 10px;
+  }
+  .open {
+    left: 0;
+  }
 }

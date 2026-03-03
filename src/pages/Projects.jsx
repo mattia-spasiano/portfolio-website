@@ -9,7 +9,7 @@ export default function Projects({ isItalian, setIsItalian }) {
             <NavBar
                 isItalian={isItalian}
                 setIsItalian={setIsItalian} />
-            <div className="section-title">
+            <div className="section-title mobile">
                     <img src="../src/assets/projects.svg" alt="" />
             </div>
             <div className="content g-1 flex">
