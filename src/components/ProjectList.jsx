@@ -1,38 +1,13 @@
 export default function ProjectList({ isItalian }) {
     var projects = [{
-        name: 'portfolio',
-        requester: 'Mattia Spasiano',
-        date: '19/02/2026'
-    },
-    {
-        name: 'portfolio',
-        requester: 'Mattia Spasiano',
-        date: '19/02/2026'
-    },
-    {
-        name: 'portfolio',
-        requester: 'Mattia Spasiano',
-        date: '19/02/2026'
-    },
-    {
-        name: 'portfolio',
-        requester: 'Mattia Spasiano',
-        date: '19/02/2026'
-    },
-    {
-        name: 'portfolio',
-        requester: 'Mattia Spasiano',
-        date: '19/02/2026'
-    },
-    {
-        name: 'portfolio',
-        requester: 'Mattia Spasiano',
-        date: '19/02/2026'
-    }] /*Array di oggetti che saranno i progetti svolti da me, avranno il nome, data, id ed azienda o persona per cui ho fatto il progetto*/
+        name: 'PORTFOLIO',
+        requester: 'MATTIA SPASIANO',
+        date: '03/09/2026'
+    }] /*Array of Objects. Will make a different file for experiences*/
 
     return (
         <>
-            <div className="project-list">
+            <div className={`${projects.length === 0 ? 'WIP' : 'project-list'}`}>
                 {projects.length === 0 ?
                     <div><strong>Work in progress!</strong></div>
                     :

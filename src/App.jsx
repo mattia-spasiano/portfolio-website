@@ -9,9 +9,9 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 function App() {
   const [isItalian, setIsItalian] = useState(true);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  }
+  // const toggleDarkMode = () => {
+  //   setIsDarkMode(!isDarkMode);
+  // }
 
   const toggleLanguage = () => {
     setIsItalian(!isItalian);
@@ -22,9 +22,10 @@ function App() {
     <>
       <div className='app-wrapper'>
         <div className="options">
-          <div onClick={toggleDarkMode} className='drkmode'>
-            DARKMODE {/* Forse da cambiare con una icona */}
-          </div>
+          {/* <div onClick={toggleDarkMode} className='drkmode'>
+            DARKMODE
+          </div> 
+          Will implement darkmode in the future*/} 
           <div onClick={toggleLanguage} className="lang">
             {isItalian ? 'IT' : 'EN'}
           </div>

@@ -4,7 +4,6 @@ import { IoClose } from 'react-icons/io5'
 export default function Navigation({ isItalian, isMenuOpen, setIsMenuOpen }) {
     const location = useLocation();
     const isHomePage = location.pathname === '/';
-    console.log('isItalian', isItalian)
     const handleCloseMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     }
@@ -12,11 +11,6 @@ export default function Navigation({ isItalian, isMenuOpen, setIsMenuOpen }) {
     return(
         <div className={`${isHomePage ? 'home-menu' : 'navigation-menu'} ${isMenuOpen ? 'open' : ''}`}> {/*Da aggiungere la classe condizionale per la sidebar*/}
             <ul>
-                {/* {isMenuOpen ? 
-                <li className="icon-close" onClick={handleCloseMenu}>
-                    <IoClose size={30} />            
-                </li>
-                : ''} */}
                 <li className={`${isMenuOpen ? 'close-visible' : 'close-hidden'} desktop`}>
                     <IoClose size={35} onClick={handleCloseMenu}/> 
                 </li>

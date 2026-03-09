@@ -25,14 +25,21 @@
   text-decoration: underline dotted;
 }
 
-.btn{
+.social{
   background-color: transparent;
   width: fit-content;
   font-family: 'doto', sans-serif;
   cursor: pointer;
 }
 
-.btn strong{
+.resume{
+  background-color: transparent;
+  width: fit-content;
+  font-family: 'doto', sans-serif;
+  cursor: pointer;
+}
+
+.resume strong{
   font-size: 24px;
 }
 
@@ -227,14 +234,22 @@ a{
 }
 
 .cta{
+  display: flex;
+  justify-content: center;
   border-bottom: dotted 3px white;
   padding-bottom: 0;
 }
 
-.cta img{
+.cta a img{
   height: 15px;
   width: 15px;
+  margin-block: auto;
   cursor: pointer;
+}
+
+.resume{
+  display: flex;
+  gap: 10px;
 }
 
 .presentation{
@@ -242,14 +257,19 @@ a{
 }
 
 /*Projects Page*/
+.WIP{
+  width: 400px;
+  background-color: transparent;
+}
 
 .project-list{
   width: 400px;
   background-color: #101010;
-  height: 300px;
+  max-height: 300px;
   overflow-y: scroll;
   overflow-wrap: break-word;
   direction: rtl;
+  padding-block: 10px;
 }
 
 .project-list > *{
@@ -268,7 +288,7 @@ a{
   background-clip: padding-box;
 }
 
-.project{
+.project-list .project:not(:last-child){
   margin: 10px 15px 10px 5px;
   border-bottom: 2px dotted white;
   padding-bottom: 10px;
@@ -286,12 +306,14 @@ a{
 }
 
 .visit{
+  font-size: 14px;
   cursor: pointer;
 }
 
 .visit img{
   width: 10px;
   height: 10px;
+  margin-block: auto;
 }
 
 /*Contacts page*/
@@ -455,4 +477,35 @@ a{
   .project-list::-webkit-scrollbar{
     display: none;
   }
+}
+
+/*Modal*/
+
+.modal{
+  background-color: rgba(28, 28, 28, 0.5);
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-content{
+  background-color: #101010;
+  border-radius: 8px;
+  padding-inline: 20px;
+  position: relative;
+  margin-top: 25vh;
+  height: 150px;
+  width: 200px;
+  display: flex;
+}
+
+.modal-content p{
+  text-align: center;
+  font-size: 18px;
+  margin: auto;
 }
