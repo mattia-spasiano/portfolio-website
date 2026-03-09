@@ -1,4 +1,5 @@
 import React from 'react'
+import LinkSVG from '../assets/link icon.svg'
 export default function ProjectList({ isItalian }) {
     var projects = [{
         name: 'PORTFOLIO',
@@ -16,7 +17,7 @@ export default function ProjectList({ isItalian }) {
                     projects.map((project, index) => (
                         <div key={index} className="project">
                             <div className="project-name">{project.name}</div>
-                            <div className="project-details">{project.requester} • {project.date} <span className="visit"><a href={project.url}><img src="../src/assets/link icon.svg" alt="" />{isItalian ? ' VISITA!' : ' EXPLORE'}</a></span></div> 
+                            <div className="project-details">{project.requester} • {project.date} <span className="visit"><a href={project.url}><img src={LinkSVG} alt="" />{isItalian ? ' VISITA!' : ' EXPLORE'}</a></span></div> 
                         </div>
                     ))}
             </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import ProjectsSVG from '../assets/projects.svg'
 import { useLocation } from "react-router-dom"
 import NavBar from "../components/NavBar"
 import ProjectList from "../components/ProjectList"
@@ -11,7 +12,7 @@ export default function Projects({ isItalian, setIsItalian }) {
                 isItalian={isItalian}
                 setIsItalian={setIsItalian} />
             <div className="section-title">
-                    <img src="../src/assets/projects.svg" alt="" />
+                    <img src={ProjectsSVG} alt="" />
             </div>
             <div className="content g-1 flex">
                 <div className="w-5">

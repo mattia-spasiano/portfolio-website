@@ -1,4 +1,5 @@
 import React from 'react'
+import HomeSVG from '../assets/home.svg'
 import NavBar from "../components/NavBar";
 import Navigation from "../components/Navigation";
 
@@ -10,7 +11,7 @@ export default function HomePage({isItalian, setIsItalian}) {
                 isItalian={isItalian}
                 setIsItalian={setIsItalian} />
             <div className="section-title">
-                    <img src="../src/assets/home.svg" alt="" />
+                    <img src={HomeSVG} alt="" />
             </div>
             <div className="content g-2">
                 <div className="left-side">

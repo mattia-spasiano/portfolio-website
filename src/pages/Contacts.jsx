@@ -1,4 +1,5 @@
 import React from 'react'
+import ContactsSVG from '../assets/contacts.svg'
 import { useState } from "react";
 import NavBar from "../components/NavBar";
 import Modal from "../components/Modal";
@@ -22,7 +23,7 @@ export default function Contacts({ isItalian, setIsItalian }) {
                 isItalian={isItalian}
                 setIsItalian={setIsItalian} />
             <div className="section-title">
-                <img src="../src/assets/contacts.svg" alt="" />
+                <img src={ContactsSVG} alt="" />
             </div>
             <div className="contacts-section">
                 <div className="contacts-content">

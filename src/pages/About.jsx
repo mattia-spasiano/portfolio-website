@@ -1,4 +1,6 @@
 import React from 'react'
+import AboutSVG from '../assets/about.svg'
+import LinkSVG from '../assets/link icon.svg'
 import HomePage from "./HomePage";
 import NavBar from "../components/NavBar";
 
@@ -11,7 +13,7 @@ export default function About({ isItalian, setIsItalian }) {
                 isItalian={isItalian}
                 setIsItalian={setIsItalian} />
             <div className="section-title">
-                <img src="../src/assets/about.svg" alt="" />
+                <img src={AboutSVG} alt="" />
             </div>
             <div className="about-section content flex-col">
                 <p className="presentation">{isItalian ? 'Come sai mi chiamo Mattia! Se vuoi sapere qualcosa su di me, sappi che sono un nerd. Videogiochi, anime, qualsiasi cosa da nerd che tu possa pensare, probabilmente mi interessa!'
@@ -19,7 +21,7 @@ export default function About({ isItalian, setIsItalian }) {
                 <p><strong>{isItalian ? 'Ma se vuoi sapere di più sulle mie skill, allora clicca qui sotto!' : ''}</strong></p>
                 <div className="cta">
                     <a href={isItalian ? "../assets/Mattia Spasiano - CV.pdf" : "../assets/Mattia Spasiano - Resume.pdf"} className="resume" download={isItalian ? 'Mattia_Spasiano_CV.pdf' : 'Mattia_Spasiano_Resume.pdf'}>
-                        <img src="../src/assets/link icon.svg" alt="" />
+                        <img src={LinkSVG} alt="" />
                         <strong>{isItalian ? 'Curriculum' : 'Resume'}</strong></a>
                 </div>
             </div>
