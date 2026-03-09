@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contacts from './pages/Contacts';
+import PageNotFound from './pages/PageNotFound';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 
 function App() {
@@ -52,6 +53,8 @@ function App() {
               element={<Projects
                 isItalian={isItalian}
                 setIsItalian={setIsItalian} />} />
+            <Route 
+              path='*' element={<PageNotFound />}/>
           </Routes>
         </div>
       </div>
